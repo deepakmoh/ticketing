@@ -5,15 +5,13 @@ import { json } from 'body-parser';
 import cookieSession from 'cookie-session';
 
 import { Request, Response, NextFunction } from "express";
-import { CustomError } from "./errors/custom-errors";
+import { errorHandler, NotFoundError } from "@deepakmoh1/common";
 
 
 import { currentUserRouter } from './routes/current-user';
 import { signinRouter } from './routes/signin';
 import { signOutRouter } from './routes/signout';
 import { signupRouter } from './routes/signup';
-import { errorHandler } from './middlewares/error-handler';
-import { NotFoundError } from './errors/not-found-error';
 import { signinRouter1 } from './routes/signin-new';
 
 
